@@ -1,5 +1,8 @@
 const wrapper = document.getElementById("tooted")
 const tooted = document.querySelectorAll(".toode")
+const text = document.querySelectorAll(".text")
+const alphabet = "abcdefghijklmnopqrstuvwxyz"
+
 let columns = document.body.clientWidth > 800 ? 4 : 2
 let mobile_state = document.body.clientWidth > 800 ? false : true
 
@@ -31,6 +34,41 @@ const updateLayout = () => {
     mobile_state = !mobile_state
 }
 
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+  }
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function corrupt ()  {
+    
+    const index = getRndInteger(0, text.length)
+    const oldHTML = text[index].innerHTML
+    const newTimeout = getRndInteger(5000, 10000)
+    text[index].innerHTML = "Yo"
+    await sleep(300)
+    text[index].innerHTML = oldHTML
+    await sleep(newTimeout)
+    corrupt()
+}
+
+async function shake ()  {
+    
+    const index = getRndInteger(0, tooted.length)
+    const shaketime = getRndInteger(400, 500)
+    const newTimeout = getRndInteger(5000, 10000)
+    tooted[index].classList.toggle("shaking")
+    await sleep(shaketime)
+    tooted[index].classList.toggle("shaking")
+    await sleep(newTimeout)
+    shake()
+}
+
 initLayout();
+
+
 window.onresize = () => updateLayout()
+
 
