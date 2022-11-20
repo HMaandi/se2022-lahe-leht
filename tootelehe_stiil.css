@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+html { width: 1200px; }
+
+header {
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    width: 100vw;
+    height: 145px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.58);
+    color: white;
+}
+h1 {
+    color: white;
+    font-family: 'Syne Mono', monospace;
+
+}
+.link-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+.link {
+    color: white;
+    font-family: 'Syne Mono', monospace;
+    text-decoration: none;
+    transition: 500ms linear;
+}
+h2{
+    color:honeydew;
+    font-family: 'Syne Mono', monospace;
+    position: fixed;
+    margin-top: 180px;
+    font-size: 40px;
+    position:relative;
+    left: 8%;
+}
+.tekstpilt {
+    display: flex;
+    align-items:flex-start
+}
+.tootepilt {
+    float: left;
+    margin: 20px;
+    width: 30%;
+    position:relative;
+    left: 7%;
+    border: 2px solid whitesmoke;
+    
+}
+.kirjeldus {
+    font-size: 25px;
+    padding-left: 100px;
+    color: white;
+    font-family: "Syne Mono", monospace;
+    line-height: 2;
+}
+body {
+    background: linear-gradient(
+        to right,
+        rgb(125, 125, 125),
+        black,
+        rgb(125, 125, 125)
+    );
+    background-size: 180%;
+}
