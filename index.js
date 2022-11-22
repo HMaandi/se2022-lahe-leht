@@ -1,6 +1,7 @@
 const wrapper = document.getElementById("tooted")
 const tooted = document.querySelectorAll(".toode")
 const text = document.querySelectorAll(".text")
+const pildid = document.querySelectorAll(".tootepilt")
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
 
 let columns = document.body.clientWidth > 800 ? 4 : 2
@@ -47,11 +48,23 @@ async function corrupt ()  {
     const index = getRndInteger(0, text.length)
     const oldHTML = text[index].innerHTML
     const newTimeout = getRndInteger(5000, 10000)
-    text[index].innerHTML = "Yo"
+    text[index].innerHTML = "AAAAAAAAAAAAAA"
     await sleep(300)
     text[index].innerHTML = oldHTML
     await sleep(newTimeout)
     corrupt()
+}
+
+async function silm ()  {
+    
+    const index = getRndInteger(0, pildid.length)
+    const oldIMG = pildid[index].src
+    const newTimeout = getRndInteger(5000, 10000)
+    pildid[index].src = "pildid/silm.gif"
+    await sleep(800)
+    pildid[index].src = oldIMG
+    await sleep(newTimeout)
+    silm()
 }
 
 async function shake ()  {
@@ -66,8 +79,12 @@ async function shake ()  {
     shake()
 }
 
-initLayout();
 
+
+initLayout();
+shake();
+corrupt();
+silm();
 
 window.onresize = () => updateLayout()
 

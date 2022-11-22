@@ -64,6 +64,7 @@ body {
         rgb(125, 125, 125)
     );
     background-size: 200%;
+    
 }
 
 .tooted {
@@ -71,26 +72,29 @@ body {
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
     
+    
 }
 
 .tooted > .toode {
-    width: 21vw;
+    width: 16vw;
+    height: 16vw;
 }
 
 .tooted.mobile > .toode {
     width: 45vw;
+    height: 45vw;
 }
 
 .toode {
     margin: 5px;
-    padding: 5px;
+    padding: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
     
-    outline: 1px solid white;
-    background-color: rgba(67, 67, 67, 0.763);
+    
+    background-color: rgba(67, 67, 67, 0.352);
     transition: 100ms;
     animation: shake 0.2s infinite;
     animation-play-state: paused;
@@ -110,16 +114,17 @@ body {
     
     margin: 10px;
     width: 70%;
+    height: 70%;
     
-    border: 2px solid whitesmoke;
+    
 }
 
 .tootekirjeldus {
     overflow-wrap: anywhere;
     margin: 5px;
     width: 80%;
-    font-size: 150%;
-    
+    font-size: 100%;
+    text-align: center;
     color: aliceblue;
 }
 
