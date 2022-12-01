@@ -82,9 +82,9 @@ async function shake ()  {
 
 
 initLayout();
-shake();
-corrupt();
-silm();
+corrupt()
+shake()
+silm()
 
 window.onresize = () => updateLayout()
 
