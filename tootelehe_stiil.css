@@ -141,6 +141,14 @@ h2{
     font-family: "Syne Mono", monospace;
     line-height: 2;
 }
+.tähelepanu{
+    font-size: 25px;
+    padding-top: -1000px;
+    padding-left: 120px;
+    color: white;
+    font-family: "Syne Mono", monospace;
+    line-height: 2;
+}
 .hind {
     position: relative;
     top: 0px;
