@@ -4,33 +4,33 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Keskaegne sõjanui - LAHE veebipood</title>
+        <title>Auto rihm™ - LAHE veebipood</title>
         <link rel="stylesheet" href="tootelehe_stiil.css">
-
+        <script src="tooteleht.js"></script>
     </head>
     <body>
         <header>
             <h1 class="text">LAHE VEEBIPOOD</h1>
             <div class="link-container">
-                <a class="link text" href="index.html">POOD</a>
+                <a class="link text" href="../index.html">POOD</a>
                 <a class="link text" href="">MEIST</a>
                 <a class="link text" href="">KAART</a>
             </div>
         </header>
         <div>
-            <h2>Keskaegne sõjanui</h2>
+            <h2>AUTOÕNNETUS</h2>
             <div class="tekstpilt">
-                <img id="myImg" class="tootepilt" src="pildid/sõjanui.webp" alt="Keskaegne sõjanui">
+                <img id="myImg" class="tootepilt" src="../pildid/auto.jpg" alt="AUTOÕNNETUS">
                 <div>
-                    <p class="hind">-123.55 <span style="color: gold">£</span></p>
-                    <p class="kirjeldus">2017. aastal Eesti metsadest leitud sõjanui, mille loojamaaks on Saksamaa. Teadaolevalt on sõjanui sepistatud 1462. aasta partiis. Kokku leiti neid 13 tükki, üksteise peale laotuna.</p>
+                    <p style="color:red" class="hind" id="demo"></p>
+                    <p class="kirjeldus">SINU AEG TULEB :)</p>
                 </div>
             </div>
             <div id="myModal" class="modal">
-                <span class="close">&times;</span>
+                <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
                 <img class="modal-content" id="img01">
             <div id="caption"></div>
-            <script src="tooteleht.js"></script>
         </div>
+        <script src="tooteleht.js"></script>
     </body>
 </html>

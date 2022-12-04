@@ -1,34 +1,47 @@
 const wrapper = document.getElementById("tooted")
-const tooted = document.querySelectorAll(".toode")
-const text = document.querySelectorAll(".text")
-const pildid = document.querySelectorAll(".tootepilt")
+
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
 const tootedOBJ = {
     
     Esimene:{
-        Pilt : "./pildid/gorilla.jpg",
-        Kirjeldus : "Lahe kirjeldus",
-        Link : ""
+        Pilt : "./pildid/päts.webp",
+        Kirjeldus : "Konstantin Pätsi büst",
+        Link : "./tooted/Päts.html"
     },
     Teine:{
-        Pilt : "./pildid/gorilla.jpg",
-        Kirjeldus : "Lahe kirjeldus",
-        Link : ""
+        Pilt : "./pildid/kõlarid.webp",
+        Kirjeldus : "Uued logitech kõlarid",
+        Link : "./tooted/Kõlarid.html"
     },
     Kolmas:{
-        Pilt : "./pildid/gorilla.jpg",
-        Kirjeldus : "Lahe kirjeldus",
-        Link : ""
+        Pilt : "./pildid/elmo.jpg",
+        Kirjeldus : "Elmo kostüüm",
+        Link : "./tooted/Elmo.html"
     },
     Neljas:{
-        Pilt : "./pildid/gorilla.jpg",
-        Kirjeldus : "Lahe kirjeldus",
-        Link : ""
+        Pilt : "./pildid/kratt.jpg",
+        Kirjeldus : "Kratt",
+        Link : "./tooted/Kratt.html"
     },
     Viies:{
-        Pilt : "./pildid/gorilla.jpg",
-        Kirjeldus : "Lahe kirjeldus",
-        Link : ""
+        Pilt : "./pildid/Tudengi_eine.jpg",
+        Kirjeldus : "Tudengi eine",
+        Link : "./tooted/Hommikusöök.html"
+    },
+    Kuues:{
+        Pilt : "./pildid/Lembitu.jpg",
+        Kirjeldus : "Lembitu Kolju",
+        Link : "./tooted/Lembitu_pealuu.html"
+    },
+    Seitsmes:{
+        Pilt : "./pildid/sõjanui.webp",
+        Kirjeldus : "Sõjanui",
+        Link : "./tooted/Sõjanui.html"
+    },
+    Kaheksas:{
+        Pilt : "./pildid/auto.jpg",
+        Kirjeldus : "Autoõnnetus",
+        Link : "./tooted/Autõnnetus.html"
     }
 }
 
@@ -65,6 +78,7 @@ const initLayout = () => {
         }
     }
     
+
 
 
 const updateLayout = () => {
@@ -128,6 +142,9 @@ async function shake ()  {
 
 
 initLayout();
+const tooted = document.querySelectorAll(".toode")
+const text = document.querySelectorAll(".text")
+const pildid = document.querySelectorAll(".tootepilt")
 corrupt()
 shake()
 silm()
