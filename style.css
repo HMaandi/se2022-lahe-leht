@@ -85,6 +85,20 @@ body {
     height: 40vw;
 }
 
+.tooted > .mees {
+    width: 12vw;
+}
+.tooted > .naine {
+    width: 12vw;
+}
+
+.tooted.mobile > .mees {
+    width: 50vw;
+}
+.tooted.mobile > .naine {
+    width: 50vw;
+}
+
 .toode {
     margin: 5px;
     padding: 10px;
@@ -135,4 +149,21 @@ body {
     left: 0;
     min-width: 100%;
     min-height: 100%;
+}
+
+.mees {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -10;
+    
+}
+.naine {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -10;
+    
 }

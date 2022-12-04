@@ -7,7 +7,28 @@ const tootedOBJ = {
     
     Esimene:{
         Pilt : "./pildid/gorilla.jpg",
-        Kirjeldus : "Lahe kirjeldus"
+        Kirjeldus : "Lahe kirjeldus",
+        Link : ""
+    },
+    Teine:{
+        Pilt : "./pildid/gorilla.jpg",
+        Kirjeldus : "Lahe kirjeldus",
+        Link : ""
+    },
+    Kolmas:{
+        Pilt : "./pildid/gorilla.jpg",
+        Kirjeldus : "Lahe kirjeldus",
+        Link : ""
+    },
+    Neljas:{
+        Pilt : "./pildid/gorilla.jpg",
+        Kirjeldus : "Lahe kirjeldus",
+        Link : ""
+    },
+    Viies:{
+        Pilt : "./pildid/gorilla.jpg",
+        Kirjeldus : "Lahe kirjeldus",
+        Link : ""
     }
 }
 
@@ -19,7 +40,7 @@ const initLayout = () => {
         console.log(tootedOBJ[i].Pilt)
         let uustoode = document.createElement("a")
         uustoode.classList.add("toode")
-        uustoode.href = ""
+        uustoode.href = tootedOBJ[i].Link
         let uusPilt = document.createElement("img")
         uusPilt.classList.add("tootepilt")
         uusPilt.src = tootedOBJ[i].Pilt
