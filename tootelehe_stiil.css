@@ -150,12 +150,14 @@ h2{
     line-height: 2;
 }
 .hind {
+    white-space: nowrap;
     position: relative;
     top: 0px;
-    padding-left: 325px;
-    font-size: 90px;
+    padding-left: 250px;
+    font-size: 80px;
     color:whitesmoke;
-    font-family: "Poppins",sans-serif;  
+    font-family: "Poppins",sans-serif; 
+    
 }
 body {
     display: flex;
