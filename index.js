@@ -3,11 +3,36 @@ const tooted = document.querySelectorAll(".toode")
 const text = document.querySelectorAll(".text")
 const pildid = document.querySelectorAll(".tootepilt")
 const alphabet = "abcdefghijklmnopqrstuvwxyz"
+const tootedOBJ = {
+    
+    Esimene:{
+        Pilt : "./pildid/gorilla.jpg",
+        Kirjeldus : "Lahe kirjeldus"
+    }
+}
 
 let columns = document.body.clientWidth > 800 ? 4 : 2
 let mobile_state = document.body.clientWidth > 800 ? false : true
 
 const initLayout = () => {
+    for (let i in tootedOBJ) {
+        console.log(tootedOBJ[i].Pilt)
+        let uustoode = document.createElement("a")
+        uustoode.classList.add("toode")
+        uustoode.href = ""
+        let uusPilt = document.createElement("img")
+        uusPilt.classList.add("tootepilt")
+        uusPilt.src = tootedOBJ[i].Pilt
+        let uusKirjeldus = document.createElement("p")
+        uusKirjeldus.classList.add("tootekirjeldus")
+        uusKirjeldus.classList.add("text")
+        uusKirjeldus.innerHTML = tootedOBJ[i].Kirjeldus
+        uustoode.appendChild(uusPilt)
+        uustoode.appendChild(uusKirjeldus)
+        
+        wrapper.appendChild(uustoode)
+    }
+    console.log(tootedOBJ.Esimene.Pilt)
     columns = mobile_state ? 2 : 4
     wrapper.style.setProperty("--columns", columns)
     if (mobile_state == false) {

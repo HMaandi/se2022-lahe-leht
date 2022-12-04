@@ -24,10 +24,10 @@
   }
 
 header {
-    position: fixed;
+    position: absolute;
     top: 0px;
     z-index: 3;
-    width: 100vw;
+    width: 100%;
     height: 20vh;
     
     text-align: center;
@@ -92,7 +92,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    
+    text-decoration: none;
     
     background-color: rgba(67, 67, 67, 0.352);
     transition: 100ms;
