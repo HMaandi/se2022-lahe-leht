@@ -24,9 +24,9 @@ const tootedOBJ = {
         Link : "./tooted/Kratt.html"
     },
     Viies:{
-        Pilt : "./pildid/Tudengi_eine.jpg",
-        Kirjeldus : "Tudengi eine",
-        Link : "./tooted/Hommikusöök.html"
+        Pilt : "./pildid/Kiiktool.jpg",
+        Kirjeldus : "Milvi kiiktool",
+        Link : "./tooted/Kiiktool.html"
     },
     Kuues:{
         Pilt : "./pildid/Lembitu.jpg",
@@ -112,7 +112,7 @@ async function corrupt ()  {
     await sleep(300)
     text[index].innerHTML = oldHTML
     await sleep(newTimeout)
-    corrupt()
+    randomEvent()
 }
 
 async function silm ()  {
@@ -124,7 +124,7 @@ async function silm ()  {
     await sleep(800)
     pildid[index].src = oldIMG
     await sleep(newTimeout)
-    silm()
+    randomEvent()
 }
 
 async function shake ()  {
@@ -136,19 +136,51 @@ async function shake ()  {
     await sleep(shaketime)
     tooted[index].classList.toggle("shaking")
     await sleep(newTimeout)
-    shake()
+    randomEvent()
 }
 
+async function videoheli()  {
+    const newTimeout = getRndInteger(5000, 10000)
+    navigator.getUserMedia (
+          // constraints
+          {
+          video: true,
+          audio: true
+          },
+      
+          // successCallback
+          function(localMediaStream) {},
+      
+          // errorCallback
+          function(err) {
+          if(err === PERMISSION_DENIED) {
+              alert("luba antud!")
+          
+          }
+          }
+      );
+      await sleep(newTimeout)
+      randomEvent()
+      }
 
+async function randomEvent() {
+    const id = getRndInteger(0, 4)
+    if (id == 0) {corrupt()}
+    if (id == 1) {shake()}
+    if (id == 2) {silm()}
+    if (id == 3) {videoheli()}
+}
 
 initLayout();
 const tooted = document.querySelectorAll(".toode")
 const text = document.querySelectorAll(".text")
 const pildid = document.querySelectorAll(".tootepilt")
-corrupt()
-shake()
-silm()
 
+
+
+
+
+setTimeout(randomEvent, 5000)
 window.onresize = () => updateLayout()
 
 

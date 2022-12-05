@@ -23,7 +23,7 @@
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
 
-header {
+  header {
     position: absolute;
     top: 0px;
     z-index: 3;
@@ -66,51 +66,33 @@ body {
         rgb(125, 125, 125)
     );
     background-size: 200%;
-    
 }
 
 .tooted {
-    margin-top: 200px;
+    margin-top: 150px;
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
-    
     
 }
 
 .tooted > .toode {
-    width: 16vw;
-    height: 16vw;
+    width: 21vw;
 }
 
 .tooted.mobile > .toode {
-    width: 40vw;
-    height: 40vw;
-}
-
-.tooted > .mees {
-    width: 12vw;
-}
-.tooted > .naine {
-    width: 12vw;
-}
-
-.tooted.mobile > .mees {
-    width: 50vw;
-}
-.tooted.mobile > .naine {
-    width: 50vw;
+    width: 45vw;
 }
 
 .toode {
     margin: 5px;
-    padding: 10px;
+    padding: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
-    text-decoration: none;
     
-    background-color: rgba(67, 67, 67, 0.352);
+    outline: 1px solid white;
+    background-color: rgba(67, 67, 67, 0.763);
     transition: 100ms;
     animation: shake 0.2s infinite;
     animation-play-state: paused;
@@ -130,17 +112,16 @@ body {
     
     margin: 10px;
     width: 70%;
-    height: 70%;
     
-    
+    border: 2px solid whitesmoke;
 }
 
 .tootekirjeldus {
     overflow-wrap: anywhere;
     margin: 5px;
     width: 80%;
-    font-size: 110%;
-    text-align: center;
+    font-size: 150%;
+    
     color: aliceblue;
 }
 
@@ -153,19 +134,22 @@ body {
     min-height: 100%;
 }
 
-.mees {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    z-index: -10;
+.suurdiv {
+	margin-top: 11.5%;
+    position: absolute;
+    width: 100%;
     
 }
-.naine {
-    position: fixed;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    z-index: -10;
+
+.vasakdiv {
+    margin-left: 2%;
+	width: 50%;
+    float: left;
+    
+}
+
+.paremdiv {
+	width: 47.8%;
+    float: right;
     
 }

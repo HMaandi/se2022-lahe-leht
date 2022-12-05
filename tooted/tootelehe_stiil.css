@@ -6,8 +6,8 @@ header {
     top: 0px;
     z-index: 3;
     width: 100%;
-    height: 20vh;
-    
+    height: 150px;
+    padding-top: 20px;
     text-align: center;
     
     background: rgba(0, 0, 0, 0.58);
@@ -18,14 +18,17 @@ h1 {
     font-family: 'Syne Mono', monospace;
 }
 .link-container {
+    padding-top: 15px;
     display: flex;
     justify-content: space-evenly;
+    font-family: 'Syne Mono', monospace;
 }
+
 .link {
     color: white;
-    font-family: 'Syne Mono', monospace;
     text-decoration: none;
     transition: 500ms linear;
+    font-size: 130%;
 }
 h2{
     color:honeydew;
@@ -137,8 +140,8 @@ h2{
   .kirjeldus {
     font-size: 25px;
     padding-top: -1000px;
-    padding-left: 120px;
-    text-indent: 2cm;
+    padding-left: 200px;
+    
     color: white;
     font-family: "Syne Mono", monospace;
     line-height: 2;
@@ -164,6 +167,8 @@ h2{
 body {
     display: flex;
     justify-content: center;
+    font-family: 'Syne Mono', monospace;
+    
     background: linear-gradient(
         to right,
         rgb(125, 125, 125),
@@ -171,4 +176,5 @@ body {
         rgb(125, 125, 125)
     );
     background-size: 200%;
+    
 }
