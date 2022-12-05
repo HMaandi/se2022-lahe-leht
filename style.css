@@ -131,3 +131,22 @@ body {
     min-width: 100%;
     min-height: 100%;
 }
+
+.suurdiv {
+	margin-top: 11.5%;
+    position: absolute;
+    width: 100%;
+}
+
+.vasakdiv {
+    margin-left: 2%;
+	width: 50%;
+    float: left;
+    
+}
+
+.paremdiv {
+	width: 47.8%;
+    float: right;
+    
+}
