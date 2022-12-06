@@ -24,7 +24,7 @@ const tootedOBJ = {
         Link : "./tooted/Kratt.html"
     },
     Viies:{
-        Pilt : "./pildid/Kiiktool.jpg",
+        Pilt : "./pildid/kiiktool.jpg",
         Kirjeldus : "Milvi kiiktool",
         Link : "./tooted/Kiiktool.html"
     },
@@ -153,10 +153,10 @@ async function videoheli()  {
       
           // errorCallback
           function(err) {
-          if(err === PERMISSION_DENIED) {
+           
               alert("luba antud!")
           
-          }
+          
           }
       );
       await sleep(newTimeout)
