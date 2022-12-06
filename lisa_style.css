@@ -58,7 +58,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: 'Syne Mono', monospace;
-    
+    color: white;
     background: linear-gradient(
         to right,
         rgb(125, 125, 125),
@@ -135,8 +135,8 @@ body {
 }
 
 .suurdiv {
-	margin-top: 11.5%;
-    position: absolute;
+	margin-top: 200px;
+    
     width: 100%;
     
 }

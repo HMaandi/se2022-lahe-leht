@@ -1,16 +1,14 @@
 const wrapper = document.getElementById("tooted")
-
-const alphabet = "abcdefghijklmnopqrstuvwxyz"
 const tootedOBJ = {
-    
+//objekt, mis sisaldab kõiki poelehe tooteid    
     Esimene:{
         Pilt : "./pildid/päts.webp",
-        Kirjeldus : "Konstantin Pätsi büst",
+        Kirjeldus : "Pätsi büst",
         Link : "./tooted/Päts.html"
     },
     Teine:{
         Pilt : "./pildid/kõlarid.webp",
-        Kirjeldus : "Uued logitech kõlarid",
+        Kirjeldus : "Logitech kõlarid",
         Link : "./tooted/Kõlarid.html"
     },
     Kolmas:{
@@ -47,7 +45,7 @@ const tootedOBJ = {
 
 let columns = document.body.clientWidth > 800 ? 4 : 2
 let mobile_state = document.body.clientWidth > 800 ? false : true
-
+//loob dünamiiliselt poelehele tooted ja kontrollib, kas lehte vaadatakse mobiililt ning kohandab lehte vastavalt
 const initLayout = () => {
     for (let i in tootedOBJ) {
         console.log(tootedOBJ[i].Pilt)
@@ -80,7 +78,7 @@ const initLayout = () => {
     
 
 
-
+//muudab lehe kujundust vastavalt akna suurusele
 const updateLayout = () => {
     let newstate = document.body.clientWidth > 800 ? false : true
     columns = newstate ? 2 : 4
@@ -94,7 +92,7 @@ const updateLayout = () => {
     }
     mobile_state = !mobile_state
 }
-
+//funktsioon suvalise täisarvu genereerimiseks
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
   }
@@ -103,6 +101,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+//funktsioon, mis ajutiselt muudab lehel olevat teksti
 async function corrupt ()  {
     
     const index = getRndInteger(0, text.length)
@@ -115,6 +114,7 @@ async function corrupt ()  {
     randomEvent()
 }
 
+//funktsioon, mis muudab ajutiselt suvalise tootepildi gifiga
 async function silm ()  {
     
     const index = getRndInteger(0, pildid.length)
@@ -127,6 +127,7 @@ async function silm ()  {
     randomEvent()
 }
 
+//raputab suvalist toodet
 async function shake ()  {
     
     const index = getRndInteger(0, tooted.length)
@@ -139,6 +140,7 @@ async function shake ()  {
     randomEvent()
 }
 
+//küsib kasutajalt luba kasutada tema kaamerat ja mikrofoni
 async function videoheli()  {
     const newTimeout = getRndInteger(5000, 10000)
     navigator.getUserMedia (
@@ -163,6 +165,7 @@ async function videoheli()  {
       randomEvent()
       }
 
+//käivitab suvalise funktsiooni
 async function randomEvent() {
     const id = getRndInteger(0, 4)
     if (id == 0) {corrupt()}

@@ -8,7 +8,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
+//funktsioon, mis näitab korraks lehe omanike sünni ja surma aastaid
 async function surm ()  {
     
     console.log(nimed.innerHTML)
