@@ -39,8 +39,8 @@ const tootedOBJ = {
         Link : "./tooted/Sõjanui.html"
     },
     Kaheksas:{
-        Pilt : "./pildid/auto.jpg",
-        Kirjeldus : "Autoõnnetus",
+        Pilt : "./pildid/opel.png",
+        Kirjeldus : "Kasutatud auto",
         Link : "./tooted/Autõnnetus.html"
     }
 }
