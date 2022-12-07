@@ -83,8 +83,8 @@ body {
 }
 
 .tooted.mobile > .toode {
-    width: 40vw;
-    height: 40vw;
+    width: 60vw;
+    height: 60vw;
 }
 
 .tooted > .mees {
@@ -102,7 +102,7 @@ body {
 }
 
 .toode {
-    margin: 5px;
+    margin: 20px;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;

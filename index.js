@@ -17,7 +17,7 @@ const tootedOBJ = {
         Link : "./tooted/Elmo.html"
     },
     Neljas:{
-        Pilt : "./pildid/kratt.jpg",
+        Pilt : "./pildid/krattUUS.jpg",
         Kirjeldus : "Kratt",
         Link : "./tooted/Kratt.html"
     },
@@ -40,7 +40,13 @@ const tootedOBJ = {
         Pilt : "./pildid/opel.png",
         Kirjeldus : "Kasutatud auto",
         Link : "./tooted/Autõnnetus.html"
-    }
+    },
+    Yheksas:{
+        Pilt : "./pildid/trykimasin.jpg",
+        Kirjeldus : "Trükimasin",
+        Link : "./tooted/trykimasin.html"
+    },
+    
 }
 
 let columns = document.body.clientWidth > 800 ? 4 : 2
@@ -65,7 +71,7 @@ const initLayout = () => {
         wrapper.appendChild(uustoode)
     }
     console.log(tootedOBJ.Esimene.Pilt)
-    columns = mobile_state ? 2 : 4
+    columns = mobile_state ? 1 : 3
     wrapper.style.setProperty("--columns", columns)
     if (mobile_state == false) {
         return
@@ -81,7 +87,7 @@ const initLayout = () => {
 //muudab lehe kujundust vastavalt akna suurusele
 const updateLayout = () => {
     let newstate = document.body.clientWidth > 800 ? false : true
-    columns = newstate ? 2 : 4
+    columns = newstate ? 1 : 3
     wrapper.style.setProperty("--columns", columns)
     if (newstate == mobile_state) {
         return
@@ -167,11 +173,12 @@ async function videoheli()  {
 
 //käivitab suvalise funktsiooni
 async function randomEvent() {
-    const id = getRndInteger(0, 4)
+    const id = getRndInteger(0, 5)
     if (id == 0) {corrupt()}
     if (id == 1) {shake()}
     if (id == 2) {silm()}
-    if (id == 3) {videoheli()}
+    if (id == 3) {shake()}
+    if (id == 4) {videoheli()}
 }
 
 initLayout();
