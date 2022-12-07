@@ -2,9 +2,9 @@ const wrapper = document.getElementById("tooted")
 const tootedOBJ = {
 //objekt, mis sisaldab kõiki poelehe tooteid    
     Esimene:{
-        Pilt : "./pildid/päts.webp",
-        Kirjeldus : "Pätsi büst",
-        Link : "./tooted/Päts.html"
+        Pilt : "./pildid/trykimasin.jpg",
+        Kirjeldus : "Trükimasin",
+        Link : "./tooted/trykimasin.html"
     },
     Teine:{
         Pilt : "./pildid/kõlarid.webp",
@@ -42,14 +42,14 @@ const tootedOBJ = {
         Link : "./tooted/Autõnnetus.html"
     },
     Yheksas:{
-        Pilt : "./pildid/trykimasin.jpg",
-        Kirjeldus : "Trükimasin",
-        Link : "./tooted/trykimasin.html"
+        Pilt : "./pildid/päts.webp",
+        Kirjeldus : "Pätsi büst",
+        Link : "./tooted/Päts.html"
     },
     
 }
 
-let columns = document.body.clientWidth > 800 ? 4 : 2
+let columns = document.body.clientWidth > 800 ? 3 : 1
 let mobile_state = document.body.clientWidth > 800 ? false : true
 //loob dünamiiliselt poelehele tooted ja kontrollib, kas lehte vaadatakse mobiililt ning kohandab lehte vastavalt
 const initLayout = () => {
@@ -149,7 +149,7 @@ async function shake ()  {
 //küsib kasutajalt luba kasutada tema kaamerat ja mikrofoni
 async function videoheli()  {
     const newTimeout = getRndInteger(5000, 10000)
-    navigator.getUserMedia (
+    navigator.mediaDevices.getUserMedia (
           // constraints
           {
           video: true,
@@ -173,12 +173,12 @@ async function videoheli()  {
 
 //käivitab suvalise funktsiooni
 async function randomEvent() {
-    const id = getRndInteger(0, 5)
+    const id = getRndInteger(0, 4)
     if (id == 0) {corrupt()}
     if (id == 1) {shake()}
     if (id == 2) {silm()}
-    if (id == 3) {shake()}
-    if (id == 4) {videoheli()}
+    if (id == 3) {videoheli()}
+    
 }
 
 initLayout();
